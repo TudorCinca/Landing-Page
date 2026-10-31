@@ -1,0 +1,621 @@
+google-site-verification: googleb9a3e1008f089dcc.html
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Titolo che appare nei risultati di Google -->
+  <title>Tudor Andrei Cinca & Walter Wesker | Sviluppo Software & Zio Bun</title>
+  
+  <!-- Descrizione sotto il titolo su Google -->
+  <meta name="description" content="Portfolio ufficiale di Tudor Andrei Cinca e Walter Wesker. Sviluppatori software e creatori del progetto Zio Bun. Contattaci per consulenze e collaborazioni.">
+  
+  <!-- Parole chiave per l'indicizzazione -->
+  <meta name="keywords" content="Tudor Andrei Cinca, Walter Wesker, Zio Bun, TheNewXDon, sviluppatore software, portfolio">
+  
+  <!-- Permette ai robot di Google di indicizzare la pagina -->
+  <meta name="robots" content="index, follow">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudor Andrei Cinca & Walter Wesker | Tech Leadership & Software Engineering</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#0f172a',
+                            950: '#030712'
+                        },
+                        neon: {
+                            cyan: '#06b6d4',
+                            blue: '#3b82f6',
+                            purple: '#a855f7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Font Inter & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        /* Neon Glows */
+        .glow-cyan {
+            box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+        }
+        .glow-purple {
+            box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.3);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-cyber-950 text-slate-100 transition-colors duration-300 dark:bg-cyber-950 dark:text-slate-100 light:bg-slate-50 light:text-slate-900 selection:bg-indigo-500 selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-panel px-6 py-4 rounded-xl shadow-2xl flex items-center space-x-3 border-l-4 border-emerald-500 bg-slate-900/90 text-white">
+            <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+            <div>
+                <h4 class="font-semibold text-sm" id="toast-title">Messaggio Inviato!</h4>
+                <p class="text-xs text-slate-300" id="toast-message">Grazie per averci contattato. Ti risponderemo al più presto.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-40 glass-panel border-b border-slate-800/50 px-4 lg:px-12 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform">
+                &lt;&gt;
+            </div>
+            <span class="font-extrabold text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                CINCA <span class="text-indigo-400">&</span> WESKER
+            </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+            <a href="#about" class="hover:text-indigo-400 transition-colors">Chi Siamo</a>
+            <a href="#team" class="hover:text-indigo-400 transition-colors">Team</a>
+            <a href="#expertise" class="hover:text-indigo-400 transition-colors">Competenze</a>
+            <a href="#projects" class="hover:text-indigo-400 transition-colors">Progetti</a>
+            <a href="#contact" class="hover:text-indigo-400 transition-colors">Contatti</a>
+        </div>
+
+        <!-- Action & Social Links -->
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="https://github.com/TheNewXDon" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-mono flex items-center space-x-2 border border-slate-700/60 transition-all hover:border-indigo-500/50">
+                <i class="fa-brands fa-github text-base"></i>
+                <span>@TheNewXDon</span>
+            </a>
+            <a href="#contact" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/30 transition-all hover:scale-105">
+                Inizia Progetto
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-50 flex flex-col justify-between p-8 transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex items-center justify-between">
+            <span class="font-bold text-lg text-white">Menu</span>
+            <button id="close-menu-btn" class="text-slate-400 hover:text-white text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-6 text-xl font-medium text-center">
+            <a href="#about" class="mobile-link hover:text-indigo-400">Chi Siamo</a>
+            <a href="#team" class="mobile-link hover:text-indigo-400">Team</a>
+            <a href="#expertise" class="mobile-link hover:text-indigo-400">Competenze</a>
+            <a href="#projects" class="mobile-link hover:text-indigo-400">Progetti</a>
+            <a href="#contact" class="mobile-link hover:text-indigo-400">Contatti</a>
+        </div>
+        <div class="flex flex-col space-y-3">
+            <a href="https://github.com/TheNewXDon" target="_blank" class="w-full py-3 text-center rounded-lg bg-slate-800 text-white font-mono text-sm flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub @TheNewXDon</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden px-6 lg:px-12 flex flex-col items-center justify-center text-center">
+        <!-- Background Ambient Lights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-indigo-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-cyan-500/15 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-panel border border-indigo-500/30 text-indigo-300 text-xs font-mono mb-8 animate-pulse">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>Innovazione Software &amp; Strategia Digitale</span>
+        </div>
+
+        <h1 class="max-w-4xl text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight mb-6">
+            Ingegneria Software &amp; <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400">
+                Architetture Strategiche
+            </span>
+        </h1>
+
+        <p class="max-w-2xl text-slate-400 text-base md:text-lg leading-relaxed mb-10">
+            Uniamo lo sviluppo full-stack d'avanguardia con l'analisi strategica dei sistemi per progettare, ottimizzare e scalare soluzioni tecnologiche ad alto impatto.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                <span>Scopri i Progetti</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-slate-800/80 text-slate-200 font-semibold border border-slate-700/60 hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Contattaci</span>
+            </a>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl w-full text-left">
+            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                <div class="text-xs font-mono text-indigo-400 mb-1">// REPOSITORIES</div>
+                <div class="text-2xl font-bold text-white">Open Source</div>
+                <div class="text-xs text-slate-400 mt-1">Sviluppo su GitHub</div>
+            </div>
+            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                <div class="text-xs font-mono text-cyan-400 mb-1">// STACK</div>
+                <div class="text-2xl font-bold text-white">Full-Stack</div>
+                <div class="text-xs text-slate-400 mt-1">Python, JS/TS, React</div>
+            </div>
+            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                <div class="text-xs font-mono text-purple-400 mb-1">// STRATEGIA</div>
+                <div class="text-2xl font-bold text-white">Ottimizzazione</div>
+                <div class="text-xs text-slate-400 mt-1">Architetture Digitali</div>
+            </div>
+            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                <div class="text-xs font-mono text-emerald-400 mb-1">// QUALITÀ</div>
+                <div class="text-2xl font-bold text-white">Clean Code</div>
+                <div class="text-xs text-slate-400 mt-1">Sistemi Scalabili</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="py-20 px-6 lg:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-xs font-mono text-indigo-400 tracking-widest uppercase mb-2">// CO-FOUNDERS & LEADERSHIP</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-white">Menti Dietro le Soluzioni</h3>
+            <p class="text-slate-400 mt-3 max-w-xl mx-auto text-sm md:text-base">
+                Competenze complementari in Ingegneria del Software e Consulenza Strategica d'Impresa.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Tudor Andrei Cinca Profile -->
+            <div class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:border-indigo-500/50 transition-all duration-300">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-all"></div>
+                
+                <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
+                    <div class="relative">
+                        <img src="https://yt3.googleusercontent.com/6yBDv8Cu7Q2QhLGGwSX9ONysjsP1X4MuBBYxVrBJR1Zbm4zrCjESfIjfFTyjkvbdHRgwi89FWg=s900-c-k-c0x00ffffff-no-rj" alt="Tudor Andrei Cinca" class="w-24 h-24 rounded-2xl object-cover border-2 border-indigo-500/40 shadow-xl" onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=TAC'">
+                        <span class="absolute -bottom-2 -right-2 bg-indigo-600 text-white p-1.5 rounded-lg text-xs" title="Software Developer">
+                            <i class="fa-solid fa-code"></i>
+                        </span>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h4 class="text-2xl font-bold text-white">Tudor Andrei Cinca</h4>
+                        <p class="text-indigo-400 font-medium text-sm">Software Engineer &amp; Full-Stack Developer</p>
+                        <div class="flex items-center justify-center sm:justify-start space-x-3 mt-3">
+                            <a href="https://github.com/TheNewXDon" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                    Specializzato nello sviluppo di applicazioni web scalabili, algoritmi efficienti e integrazioni backend complesse. Focus costante sul clean code, open-source e moderni stack di sviluppo software.
+                </p>
+
+                <div class="space-y-3">
+                    <h5 class="text-xs font-mono text-slate-400 uppercase tracking-wider">Skillset Tecnico</h5>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-indigo-300">Python</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-cyan-300">JavaScript / TS</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-purple-300">React / Web API</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-emerald-300">Git &amp; GitHub</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-amber-300">System Design</span>
+            </div>
+
+            <!-- Walter Wesker Profile -->
+            <div class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-300">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
+
+                <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
+                    <div class="relative">
+                        <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-cyan-600 to-slate-800 border-2 border-cyan-500/40 flex items-center justify-center text-white text-3xl font-extrabold shadow-xl">
+                            <img src="https://static0.hardcoregamerimages.com/wordpress/wp-content/uploads/2025/09/albert-wesker-from-resident-evil.jpeg?q=49&fit=crop&w=825&dpr=2" alt="Walter Wesker" class="w-24 h-24 rounded-2xl object-cover border-2 border-indigo-500/40 shadow-xl" onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=WW'">
+                        </div>
+                        <span class="absolute -bottom-2 -right-2 bg-cyan-600 text-white p-1.5 rounded-lg text-xs" title="Tech Strategist">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </span>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h4 class="text-2xl font-bold text-white">Walter Wesker (Alter Ego)</h4>
+                        <p class="text-cyan-400 font-medium text-sm">Strategic Analyst &amp; Tech Consultant</p>
+                        <div class="flex items-center justify-center sm:justify-start space-x-3 mt-3">
+                            <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#contact" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Contatta Walter">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                    Esperto nella pianificazione strategica, ottimizzazione dei processi digitali e consulenza sulle architetture aziendali. Guida l'allineamento tra obiettivi di business e innovazione tecnologica.
+                </p>
+
+                <div class="space-y-3">
+                    <h5 class="text-xs font-mono text-slate-400 uppercase tracking-wider">Competenze Chiave</h5>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-cyan-300">Project Management</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-indigo-300">Tech Strategy</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-purple-300">Digital Transformation</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-xs font-mono text-emerald-300">Process Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE / CAPABILITIES SECTION -->
+    <section id="expertise" class="py-20 px-6 lg:px-12 bg-slate-900/40 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-2">// COSA FACCIAMO</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Aree di Competenza</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-all duration-300 border border-slate-800 hover:border-indigo-500/40">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Sviluppo Full-Stack</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Progettazione di piattaforme web dinamiche e reattive con backend robusti e frontend moderni, garantendo velocità e usabilità eccezionali.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-all duration-300 border border-slate-800 hover:border-cyan-500/40">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Architettura di Sistema</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Strutturazione di software scalabili e manutenibili nel tempo, ottimizzando l'infrastruttura codificata e i flussi di dati backend.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-all duration-300 border border-slate-800 hover:border-purple-500/40">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chess"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Consulenza Strategica</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Analisi dei processi business/tech per identificare colli di bottiglia, automatizzare workflow e implementare soluzioni digitali mirate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-20 px-6 lg:px-12 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <h2 class="text-xs font-mono text-indigo-400 tracking-widest uppercase mb-2">// PORTFOLIO & REPO</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Progetti &amp; Open Source</h3>
+            </div>
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
+                <button data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-xs font-mono bg-indigo-600 text-white transition-all">Tutti</button>
+                <button data-filter="web" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all">Web App</button>
+                <button data-filter="tools" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all">Strumenti &amp; Script</button>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+            
+            <!-- Project Item 1 -->
+            <div class="project-card glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between" data-category="web">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">Web App</span>
+                        <a href="https://github.com/TheNewXDon" target="_blank" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Digital Ecosystem Hub</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        Piattaforma centralizzata per il monitoraggio di infrastrutture web e l'integrazione di servizi API distribuiti.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-2">
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">TypeScript</span>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">React</span>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Tailwind</span>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-900/60 border-t border-slate-800/80 flex justify-between items-center text-xs">
+                    <span class="text-slate-400 font-mono">TheNewXDon</span>
+                    <a href="https://github.com/TheNewXDon" target="_blank" class="text-indigo-400 hover:underline inline-flex items-center space-x-1">
+                        <span>Vedi Repositories</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Item 2 -->
+            <div class="project-card glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="tools">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md border border-cyan-500/20">Strumenti &amp; Script</span>
+                        <a href="https://github.com/TheNewXDon" target="_blank" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Automated Data Pipeline</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        Set di script Python ad alte prestazioni per la pulizia, trasformazione e sincronizzazione di dataset complessi.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-2">
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Python</span>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Automation</span>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">REST API</span>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-900/60 border-t border-slate-800/80 flex justify-between items-center text-xs">
+                    <span class="text-slate-400 font-mono">TheNewXDon</span>
+                    <a href="https://github.com/TheNewXDon" target="_blank" class="text-cyan-400 hover:underline inline-flex items-center space-x-1">
+                        <span>Vedi Repositories</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Item 3 -->
+            <div class="project-card glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition-all duration-300 flex flex-col justify-between" data-category="web">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20">Web App</span>
+                        <a href="https://github.com/TheNewXDon" target="_blank" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Enterprise Analytics Suite</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        Dashboard interattiva orientata alle metriche aziendali per supportare le decisioni strategiche di gestione.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-2">
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">JavaScript</span>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">UI/UX</span>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Strategy</span>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-900/60 border-t border-slate-800/80 flex justify-between items-center text-xs">
+                    <span class="text-slate-400 font-mono">TheNewXDon</span>
+                    <a href="https://github.com/TheNewXDon" target="_blank" class="text-purple-400 hover:underline inline-flex items-center space-x-1">
+                        <span>Vedi Repositories</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- GitHub Profile Banner CTA -->
+        <div class="mt-12 p-8 rounded-2xl glass-panel border border-indigo-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-indigo-400 text-2xl">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white">Esplora il codice sorgente completo su GitHub</h4>
+                    <p class="text-slate-400 text-xs">Segui le novità, le repositories e i contributi open source di Tudor Andrei Cinca (@TheNewXDon).</p>
+                </div>
+            </div>
+            <a href="https://github.com/TheNewXDon" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm whitespace-nowrap shadow-lg transition-all hover:scale-105">
+                Visita GitHub @TheNewXDon
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM & FOOTER SECTION -->
+    <section id="contact" class="py-20 px-6 lg:px-12 bg-slate-900/60 border-t border-slate-800/60">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-mono text-indigo-400 tracking-widest uppercase mb-2">// CONTATTACI</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Lavoriamo Insieme</h3>
+                <p class="text-slate-400 mt-2 text-sm">Hai un progetto da sviluppare o necessiti di una consulenza tecnologica?</p>
+            </div>
+
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-slate-800">
+                <form action="https://formspree.io/f/xeaalngv" method="POST" class="contact-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 mb-2">IL TUO NOME *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors text-sm" placeholder="Mario Rossi">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 mb-2">EMAIL *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors text-sm" placeholder="mario@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-300 mb-2">OGGETTO</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors text-sm" placeholder="Sviluppo Software / Consulenza Tecnologica">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-300 mb-2">MESSAGGIO *</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors text-sm" placeholder="Descrivi il tuo progetto o le tue esigenze..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold text-sm shadow-xl transition-all hover:scale-[1.01]">
+                        Invia Messaggio
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-6 lg:px-12 border-t border-slate-900 bg-slate-950 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <div class="font-bold text-white text-base mb-1">Tudor Andrei Cinca &amp; Walter Wesker</div>
+                <p class="text-slate-400">Software Engineering &amp; Strategic Advisory</p>
+            </div>
+
+            <div class="flex items-center space-x-6 text-slate-400">
+                <a href="https://github.com/TheNewXDon" target="_blank" class="hover:text-indigo-400 transition-colors">
+                    <i class="fa-brands fa-github text-lg"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-indigo-400 transition-colors">
+                    <i class="fa-brands fa-linkedin text-lg"></i>
+                </a>
+            </div>
+
+            <div class="text-center md:text-right text-slate-400">
+                &copy; <span id="year"></span> Tutti i diritti riservati. GitHub: <a href="https://github.com/TheNewXDon" class="text-indigo-400 hover:underline">TheNewXDon</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Project Category Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-indigo-600', 'text-white', 'active');
+                    b.classList.add('bg-slate-800', 'text-slate-300');
+                });
+
+                btn.classList.remove('bg-slate-800', 'text-slate-300');
+                btn.classList.add('bg-indigo-600', 'text-white', 'active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form Submission & Toast Feedback
+        const contactForm = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Simple input validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                return;
+            }
+
+            // Show Toast Notification
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            // Clear inputs
+            contactForm.reset();
+
+            // Hide Toast after 4 seconds
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
